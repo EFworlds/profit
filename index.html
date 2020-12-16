@@ -17,19 +17,24 @@
 
         }
 
-        for(i = minIndex; i < price.length; i++){
-            if( maxPrice < price[i] ){
-                maxPrice =  price[i];
-                
+        if( minIndex < price.length -1){
+
+            for(i = minIndex; i < price.length; i++){
+                if( maxPrice < price[i] ){
+                    maxPrice =  price[i];
+                    
+                }
+
             }
+            let profit = maxPrice - minPrice;
 
+            console.log( minPrice, minIndex);
+            console.log( maxPrice);
+                //alert(`bingo. you are rich. your profit is ${profit}$`);
+            console.log(`profit is ${profit}$`)
+        }else{
+            alert('unlucky in business');
         }
-         let profit = maxPrice - minPrice;
-
-        //console.log( minPrice, minIndex);
-        //console.log( maxPrice);
-        alert(`bingo. you are rich. your profit is ${profit}$`);
-        //console.log(`profit is ${profit}$`)
 
     </script>
     <title>Document</title>
